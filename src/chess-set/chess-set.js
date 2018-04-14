@@ -6,12 +6,29 @@ import {
 import getSquares from './getSquares';
 
 
-const ChessSet = () => (
-  <Container>
-    <Board>
-      {getSquares()}
-    </Board>
-  </Container>
-);
+class ChessSet extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      selected: -1
+    }
+  }
+
+    squareClick = (index) => {
+      this.setState({
+        selected: index
+      });
+    }
+
+   render() {
+     return (
+       <Container>
+         <Board>
+           {getSquares(this.squareClick, this.state.selected)}
+         </Board>
+       </Container>
+     )
+   }
+};
 
 export default ChessSet;

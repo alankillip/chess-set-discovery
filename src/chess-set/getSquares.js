@@ -1,14 +1,18 @@
 import React from 'react';
 import {getSquareIndexes} from "./utils";
-import {Square} from './styled';
+import {Square, SquareContents} from './styled';
 
-const getSquare = (index) => (
+const getSquare = (onClick, selected) => (index) => (
   <Square
     key={index}
     index={index}
-  />
+    onClick={() => onClick(index)}
+    selected={selected === index}
+  >
+    <SquareContents selected={selected === index} />
+  </Square>
 );
 
-const getSquares = () => getSquareIndexes().map(getSquare);
+const getSquares = (onClick, selected) => getSquareIndexes().map(getSquare(onClick, selected));
 
 export default getSquares;
