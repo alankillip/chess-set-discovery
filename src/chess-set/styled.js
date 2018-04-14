@@ -4,7 +4,7 @@ import * as themeUtils from './theme-utils';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 60px;
 `;
 
 export const Board = styled.div`

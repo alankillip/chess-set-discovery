@@ -1,6 +1,6 @@
 export default {
-  darkSquare: '#990000',
-  lightSquare: '#ffe755',
-  size: 500,
-  borderColor: '#990000'
+  darkSquare: '#000000',
+  lightSquare: '#ffffff',
+  borderColor: '#000000',
+  size: 500
 }
