@@ -1,13 +1,13 @@
 import {NUM_SQUARES, getRowNum, getColumnNum, isOdd} from "./utils";
 
-export const getSize = props => props.theme.size;
+export const getSize = props => 500;
 
-export const getBorderColor = props => props.theme.borderColor;
+export const getBorderColor = props => '#000000';
 
-export const getSquareSize = props => props.theme.size / NUM_SQUARES;
+export const getSquareSize = props => getSize() / NUM_SQUARES;
 
 export const getSquareColor = props =>
-  isOdd(getColumnNum(props.index) + getRowNum(props.index)) ? props.theme.darkSquare : props.theme.lightSquare;
+  isOdd(getColumnNum(props.index) + getRowNum(props.index)) ? '#000000' : '#ffffff';
 
 export const getSquareTop = props => getRowNum(props.index) * getSquareSize(props);
 
