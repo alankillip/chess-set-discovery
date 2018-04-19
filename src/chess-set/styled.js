@@ -15,13 +15,20 @@ export const Board = styled.div`
   height: ${themeUtils.getSize}px;
 `;
 
-export const Square = styled.div`
+const Square = styled.div`
   position: absolute;
   width: ${themeUtils.getSquareSize}px;
   height: ${themeUtils.getSquareSize}px;
-  background-color: ${props => props.selected ? '#999999' : themeUtils.getSquareColor};
   top: ${themeUtils.getSquareTop}px;
   left: ${themeUtils.getSquareLeft}px;
+`;
+
+export const WhiteSquare = Square.extend`
+  background-color: ${props => props.selected ? '#999999' : props.theme.lightSquare};
+`;
+
+export const BlackSquare = Square.extend`
+  background-color: ${props => props.selected ? '#999999' : props.theme.darkSquare};
 `;
 
 export const SquareContents = styled.div`
