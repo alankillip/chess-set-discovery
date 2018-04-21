@@ -17,10 +17,6 @@ export const Board = styled.div`
 
 const Square = styled.div`
   position: absolute;
-  width: ${themeUtils.getSquareSize}px;
-  height: ${themeUtils.getSquareSize}px;
-  top: ${themeUtils.getSquareTop}px;
-  left: ${themeUtils.getSquareLeft}px;
 `;
 
 export const WhiteSquare = Square.extend`
