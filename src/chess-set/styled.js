@@ -19,11 +19,11 @@ const Square = styled.div`
   position: absolute;
 `;
 
-export const WhiteSquare = Square.extend`
+export const WhiteSquare = styled(Square)`
   background-color: ${props => props.selected ? '#999999' : props.theme.lightSquare};
 `;
 
-export const BlackSquare = Square.extend`
+export const BlackSquare = styled(Square)`
   background-color: ${props => props.selected ? '#999999' : props.theme.darkSquare};
 `;
 
